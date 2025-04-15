@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  e-learning:
+    image: nginx:alpine
+    container_name: e-learning-container
+    restart: always
+    ports:
+      - "8080:80"
+    volumes:
+      - ./index.html:/usr/share/nginx/html/index.html
+      - ./login.html:/usr/share/nginx/html/login.html
+      - ./loginStyle.css:/usr/share/nginx/html/loginStyle.css
+      - ./style.css:/usr/share/nginx/html/style.css
+      - ./script.js:/usr/share/nginx/html/script.js
+      - ./images:/usr/share/nginx/html/images
+    networks:
+      - e-learning-network
+
+networks:
+  e-learning-network:
+    driver: bridge
