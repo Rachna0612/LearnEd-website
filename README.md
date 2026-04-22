@@ -1,4 +1,4 @@
-# travel-website Terraform Deployment
+# LEARN-ED-website Terraform Deployment
 
 This project automates the deployment of an Nginx web server for the **travel-website** an education website using **Terraform on AWS**.
 
